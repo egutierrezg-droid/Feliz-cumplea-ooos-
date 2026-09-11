@@ -13,33 +13,39 @@ function abrirCarta(){
     crearConfeti();
 
 }
-
-
-const fechaInicio = new Date("2023-12-15");
+const fechaInicio = new Date(2023, 11, 15);
 
 function actualizarContador() {
 
-    const ahora = new Date();
+    const hoy = new Date();
 
-    const diferencia = ahora - fechaInicio;
+    let años = hoy.getFullYear() - fechaInicio.getFullYear();
+    let meses = hoy.getMonth() - fechaInicio.getMonth();
+    let dias = hoy.getDate() - fechaInicio.getDate();
 
-    const dias = Math.floor(
-        diferencia / (1000 * 60 * 60 * 24)
-    );
+    if (dias < 0) {
+        meses--;
 
-    const años = Math.floor(dias / 365);
+        const ultimoMes = new Date(
+            hoy.getFullYear(),
+            hoy.getMonth(),
+            0
+        );
 
-    const meses = Math.floor((dias % 365) / 30);
+        dias += ultimoMes.getDate();
+    }
 
-    const diasRestantes = (dias % 365) % 30;
+    if (meses < 0) {
+        años--;
+        meses += 12;
+    }
 
-    document.getElementById("tiempo-juntos").innerHTML = `
-        ❤️ ${años} años, ${meses} meses y ${diasRestantes} días ❤️
-    `;
+    document.getElementById("tiempo-juntos").innerHTML =
+        `❤️ ${años} años, ${meses} meses y ${dias} días ❤️`;
 }
 
 actualizarContador();
-
+setInterval(actualizarContador, 1000);
 setInterval(actualizarContador, 1000);
 function volverInicio(){
 
@@ -89,4 +95,26 @@ function crearConfeti(){
 
     }
 
+}function abrirVideo(video){
+
+    const modal = document.getElementById("modalVideo");
+    const videoGrande = document.getElementById("videoGrande");
+
+    videoGrande.src = video.querySelector("source").src;
+
+    videoGrande.muted = true; // ← agrega esta línea
+
+    modal.style.display = "flex";
+
+    videoGrande.play();
+}
+
+function cerrarVideo(){
+
+    const modal = document.getElementById("modalVideo");
+    const videoGrande = document.getElementById("videoGrande");
+
+    videoGrande.pause();
+
+    modal.style.display = "none";
 }
