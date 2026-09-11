@@ -82,6 +82,13 @@
                 <p>✨Un día especial</p>
             </div>
 
+<div class="polaroid">
+<video autoplay muted loop playsinline onclick="abrirVideo(this)">
+    <source src="video/video1.mp4" type="video/mp4">
+</video>
+  <p> Nos ibamos enamorando de a poquito 😍</p>
+</div>
+
             <div class="polaroid">
                 <img src="images/foto3.jpeg" onclick="abrirFoto(this)">
                 <p>Otro día especial ✨</p>
@@ -91,6 +98,13 @@
                 <img src="images/foto4.jpeg" onclick="abrirFoto(this)">
                 <p>Tu recuerdo favorito 💕</p>
             </div>
+
+<div class="polaroid">
+<video autoplay muted loop playsinline onclick="abrirVideo(this)">
+    <source src="video/video2.mp4" type="video/mp4">
+</video>
+  <p>Uno de mis recuerdos favoritos ❤️</p>
+</div>
 
             <div class="polaroid">
                 <img src="images/foto5.jpeg" onclick="abrirFoto(this)">
@@ -102,6 +116,13 @@
                 <p>Otro recuerdito 💕</p>
             </div>
 
+<div class="polaroid">
+<video autoplay muted loop playsinline onclick="abrirVideo(this)">
+    <source src="video/video3.mp4" type="video/mp4">
+</video>
+  <p>Eres mi mundo entero mi negra 🐧</p>
+</div>
+
             <div class="polaroid">
                 <img src="images/foto7.jpeg" onclick="abrirFoto(this)">
                 <p>❤️ No podía faltar este</p>
@@ -112,9 +133,33 @@
                 <p>Son muy bonitos recuerdos 💕</p>
             </div>
 
+<div class="polaroid">
+<video autoplay muted loop playsinline onclick="abrirVideo(this)">
+    <source src="video/video4.mp4" type="video/mp4">
+</video>
+  <p>Juntos nos complementamos</p>
+</div>
+
             <div class="polaroid">
                 <img src="images/foto9.jpeg" onclick="abrirFoto(this)">
-                <p>❤️ Tu camarada</p>
+                <p>❤️ El amor de tu vida (según ella)</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="images/foto12.jpeg" onclick="abrirFoto(this)">
+                <p>Tu camarada ❤️</p>
+            </div>
+
+<div class="polaroid">
+<video autoplay muted loop playsinline onclick="abrirVideo(this)">
+    <source src="video/video5.mp4" type="video/mp4">
+</video>
+  <p>❤️ Estamos locos 🤪</p>
+</div>
+
+            <div class="polaroid">
+                <img src="images/foto11.jpeg" onclick="abrirFoto(this)">
+                <p>Los que te amamos ❤️</p>
             </div>
 
             <div class="polaroid">
@@ -122,13 +167,24 @@
                 <p>Siempre tú ❤️</p>
             </div>
 
+<div class="polaroid">
+<video autoplay muted loop playsinline
+       onclick="abrirVideo(this)"
+       data-muted="true">
+    <source src="video/video6.mp4" type="video/mp4">
+</video>
+  <p>TE AMO</p>
+</div>
+
             <div class="polaroid">
-                <img src="images/foto11.jpeg" onclick="abrirFoto(this)">
-                <p>Los que te amamos ❤️</p>
+                <img src="images/foto14.jpeg" onclick="abrirFoto(this)">
+                <p>Niña de sonrisa encantadora 🥰</p>
             </div>
 
-        </div>
-
+            <div class="polaroid">
+                <img src="images/foto13.jpeg" onclick="abrirFoto(this)">
+                <p>Siempre tú ❤️</p>
+            </div>
     </section>
 
     <section class="historia">
@@ -161,15 +217,16 @@
         </div>
 
     </section>
-<div class="corazones">
+<div class="corazones"> 
     <span>❤️</span>
     <span>💕</span>
     <span>💖</span>
-    <span>❤️</span>
+    <span>💗</span>
     <span>💞</span>
     <span>💕</span>
     <span>❤️</span>
     <span>💖</span>
+    <span>🥰</span>
 </div>
 <section class="contador">
 
@@ -216,11 +273,18 @@
     <p class="footer-pequeno">
         15 de diciembre de 2023 — Para siempre en nuestros recuerdos ✨
     </p>
+    VALES LA ESPERA, VALES LA DISTANCIA, VALES EL TIEMPO. TE AMO CON TODO MI SER
+     <p>
+
+    </p>
 
 </footer>
 
     <script src="script.js"></script>
 
+<div id="modalVideo" class="modal-video" onclick="cerrarVideo()">
+    <video id="videoGrande" controls autoplay></video>
+</div>
 </body>
 
 </html>
